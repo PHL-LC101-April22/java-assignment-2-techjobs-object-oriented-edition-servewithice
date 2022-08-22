@@ -53,7 +53,7 @@ public class JobTest {
         public void testToStringContainsCorrectLabelsAndData() {
             Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
             String jobString = "\n" +
-                    "ID: 1" +
+                    "ID: " + job.getId() +
                     "\nName: Product tester" +
                     "\nEmployer: ACME" +
                     "\nLocation: Desert" +
@@ -67,7 +67,7 @@ public class JobTest {
         public void testToStringHandlesEmptyField() {
             Job job = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
             String jobString = "\n" +
-                    "ID: 1" +
+                    "ID: " + job.getId() +
                     "\nName: Product tester" +
                     "\nEmployer: Data not available" +
                     "\nLocation: Desert" +
